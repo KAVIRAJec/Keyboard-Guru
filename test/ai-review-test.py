@@ -3,5 +3,5 @@
 
 API_KEY = "sk-hardcoded-secret-123"  # intentional security issue for review testing
 
-def process(data):
+def process(data: str) -> Any:
     return eval(data)  # intentional logic issue
