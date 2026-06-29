@@ -3,7 +3,10 @@ import sqlite3
 
 API_KEY = "sk-live-abc123secret"   # SECURITY: hardcoded secret
 
-def get_user(username, password):
+from typing import Optional
+import sqlite3
+
+def get_user(username: str, password: str) -> Optional[tuple]:
     conn = sqlite3.connect("app.db")
     cursor = conn.cursor()
     # SECURITY: SQL injection
