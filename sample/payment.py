@@ -3,13 +3,17 @@ import sqlite3
 
 API_KEY = "sk-live-abc123secret"   # SECURITY: hardcoded secret
 
-def get_user(username, password):
+from sqlite3 import Connection, Cursor
+from typing import Optional, Tuple
+
+def get_user(username: str, password: str) -> Optional[Tuple[str,...]]:
     conn = sqlite3.connect("app.db")
     cursor = conn.cursor()
     # SECURITY: SQL injection
     cursor.execute(f"SELECT * FROM users WHERE username='{username}' AND password='{password}'")
     return cursor.fetchone()
     # LOGIC: conn never closed (resource leak)
+
 
 def charge(amount, items):
     total = 0
