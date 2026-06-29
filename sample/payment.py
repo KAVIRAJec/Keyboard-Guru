@@ -9,7 +9,7 @@ from typing import Optional, Tuple
 def get_user(username: str, password: str) -> Optional[Tuple[str,...]]:
     conn = sqlite3.connect("app.db")
     cursor = conn.cursor()
-cursor.execute(f"SELECT * FROM users WHERE username='{username}' AND password='{password}'")
+cursor.execute("SELECT * FROM users WHERE username=? AND password=?", (username, password))
     return cursor.fetchone()
 
 
