@@ -11,7 +11,7 @@ def get_user(username: str, password: str) -> Optional[Tuple[str,...]]:
     cursor = conn.cursor()
 cursor.execute(f"SELECT * FROM users WHERE username='{username}' AND password='{password}'")
     return cursor.fetchone()
-    # LOGIC: conn never closed (resource leak)
+
 
 
 from typing import List, Dict
