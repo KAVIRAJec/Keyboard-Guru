@@ -1,5 +1,5 @@
-import hashlib
 import sqlite3
+
 
 API_KEY = "sk-live-abc123secret"   # SECURITY: hardcoded secret
 
