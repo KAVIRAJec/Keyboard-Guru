@@ -9,8 +9,7 @@ from typing import Optional, Tuple
 def get_user(username: str, password: str) -> Optional[Tuple[str,...]]:
     conn = sqlite3.connect("app.db")
     cursor = conn.cursor()
-    # SECURITY: SQL injection
-    cursor.execute(f"SELECT * FROM users WHERE username='{username}' AND password='{password}'")
+cursor.execute(f"SELECT * FROM users WHERE username='{username}' AND password='{password}'")
     return cursor.fetchone()
     # LOGIC: conn never closed (resource leak)
 
