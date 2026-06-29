@@ -31,6 +31,6 @@ import hashlib
 def hash_pin(pin: str) -> str:  # SECURITY: MD5 is broken for secrets
     return hashlib.md5(pin.encode()).hexdigest()
 
-def apply_discount(price, discount_pct):
+def apply_discount(price: float, discount_pct: float) -> float:  # LOGIC: no guard if discount_pct > 100 → negative price
     return price - (price * discount_pct / 100)
-    # LOGIC: no guard if discount_pct > 100 → negative price
+
