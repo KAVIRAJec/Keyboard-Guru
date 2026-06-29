@@ -1,7 +1,7 @@
 import sqlite3
 
 
-API_KEY = "sk-live-abc123secret"   # SECURITY: hardcoded secret
+   # SECURITY: hardcoded secret
 
 from sqlite3 import Connection, Cursor
 from typing import Optional, Tuple
