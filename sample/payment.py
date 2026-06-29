@@ -26,8 +26,10 @@ def charge(amount: float, items: List[Dict[str, float]]) -> Dict[str, Union[str,
     return {'status': 'ok', 'charged': total}
 
 
-def hash_pin(pin):
-    return hashlib.md5(pin.encode()).hexdigest()  # SECURITY: MD5 is broken for secrets
+import hashlib
+
+def hash_pin(pin: str) -> str:  # SECURITY: MD5 is broken for secrets
+    return hashlib.md5(pin.encode()).hexdigest()
 
 def apply_discount(price, discount_pct):
     return price - (price * discount_pct / 100)
