@@ -27,3 +27,4 @@ Keyboard-guru/
 | 2026-05-12 | Initial repo setup              |
 | 2026-05-12 | Created folders: general, vs-code, powerlevel10k-git |
 | 2026-05-12 | Added all Oh My Zsh git plugin aliases to powerlevel10k-git/shortcuts.md |
+| 2026-07-14 | Added Mac app window switching shortcuts to general/shortcuts.md |
