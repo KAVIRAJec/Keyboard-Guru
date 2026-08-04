@@ -8,7 +8,8 @@ Personal keyboard shortcut reference repo for Kaviraj.
 Keyboard-guru/
 ├── general/          # OS-level and universal shortcuts
 ├── vs-code/          # VS Code editor shortcuts
-└── powerlevel10k-git/ # Powerlevel10k theme + Git CLI shortcuts
+├── powerlevel10k-git/ # Powerlevel10k theme + Git CLI shortcuts
+└── arc-browser/      # Arc browser shortcuts
 ```
 
 ## Conventions
@@ -28,3 +29,4 @@ Keyboard-guru/
 | 2026-05-12 | Created folders: general, vs-code, powerlevel10k-git |
 | 2026-05-12 | Added all Oh My Zsh git plugin aliases to powerlevel10k-git/shortcuts.md |
 | 2026-07-14 | Added Mac app window switching shortcuts to general/shortcuts.md |
+| 2026-08-04 | Added desktop-switching shortcut to general/shortcuts.md; created arc-browser folder with sidebar shortcut |
